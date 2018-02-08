@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="misaki_gothic.ttf">
+            <string>MisakiGothic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeakToMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bug.png" translatesAutoresizingMaskIntoConstraints="NO" id="DqT-Sd-zzF">
+                                <rect key="frame" x="0.0" y="3" width="375" height="510"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="prE-ge-ovy">
+                                <rect key="frame" x="37" y="66" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Zew-h0-Iz9"/>
+                                </constraints>
+                                <color key="textColor" red="0.95159254156253059" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="MisakiGothic" family="MisakiGothic" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-MP-Nm9">
+                                <rect key="frame" x="0.0" y="521" width="375" height="146"/>
+                                <color key="backgroundColor" red="0.95159254159999995" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="Ba6-ZG-yru"/>
+                                </constraints>
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonDown" destination="BYZ-38-t0r" eventType="touchDown" id="XxJ-MB-nBc"/>
+                                    <action selector="recordButtonUp" destination="BYZ-38-t0r" eventType="touchUpOutside" id="BQ2-0s-rTv"/>
+                                    <action selector="recordButtonUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3e-JT-4DY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DqT-Sd-zzF" firstAttribute="trailing" secondItem="7xe-MP-Nm9" secondAttribute="trailing" id="4c1-cf-QL6"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="top" secondItem="DqT-Sd-zzF" secondAttribute="bottom" constant="8" symbolic="YES" id="8f3-Pj-6lP"/>
+                            <constraint firstAttribute="trailing" secondItem="7xe-MP-Nm9" secondAttribute="trailing" id="An5-PJ-yhZ"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="DBU-Fs-HCG"/>
+                            <constraint firstItem="DqT-Sd-zzF" firstAttribute="leading" secondItem="7xe-MP-Nm9" secondAttribute="leading" id="GJb-dc-SJ9"/>
+                            <constraint firstItem="DqT-Sd-zzF" firstAttribute="centerX" secondItem="prE-ge-ovy" secondAttribute="centerX" id="OT1-BF-XHC"/>
+                            <constraint firstItem="DqT-Sd-zzF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-17" id="USe-Jc-fqM"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yn8-WT-C5b"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="ax7-m1-dug"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="qOs-nG-WVY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordButton" destination="7xe-MP-Nm9" id="WtH-Dp-x5U"/>
+                        <outlet property="textView" destination="prE-ge-ovy" id="xF3-eW-DoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-2.2488755622188905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bug.png" width="842" height="595"/>
+    </resources>
+</document>
