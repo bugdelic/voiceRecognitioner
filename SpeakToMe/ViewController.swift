@@ -13,6 +13,11 @@ import Speech
 import SwiftOSC
 
 let address = OSCAddressPattern("/test/")
+var port="8080"
+var url="sonic.local"
+
+// Setup Client. Change address from localhost if needed.
+var client = OSCClient(address: url, port: Int(port)!)
 
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: Properties
@@ -148,6 +153,13 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     
     // MARK: Interface Builder actions
     
+    @IBAction func setURL(_ sender: UITextField) {
+       // url = sender.text!
+    }
+    @IBAction func setPort(_ sender: UITextField) {
+       // port = sender.text!
+        
+    }
     @IBAction func recordButtonTapped() {
         if audioEngine.isRunning {
             audioEngine.stop()
