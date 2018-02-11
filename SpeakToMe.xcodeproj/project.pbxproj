@@ -13,9 +13,13 @@
 		7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4771CE7A57600505E8B /* Assets.xcassets */; };
 		7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */; };
 		A096F199327B517B6F88CFF8 /* Pods_SpeakToMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F94BC00DE1CBB28F60C07721 /* Pods_SpeakToMe.framework */; };
+		AE385C8A2030133C00341E4A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE385C892030133C00341E4A /* libsqlite3.0.tbd */; };
+		AE385C8D2030153E00341E4A /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE385C8C2030153E00341E4A /* SQLiteManager.m */; };
+		AE6674EB202FFCAF00E5DED4 /* misaki.json in Resources */ = {isa = PBXBuildFile; fileRef = AE6674E9202FFCAF00E5DED4 /* misaki.json */; };
+		AE6674EC202FFCAF00E5DED4 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE6674EA202FFCAF00E5DED4 /* misaki_gothic.ttf */; };
 		AE76018F202C3A1C00C5FAE2 /* BugConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = AE76018E202C3A1C00C5FAE2 /* BugConnector.m */; };
 		AE760195202CB70400C5FAE2 /* bug.png in Resources */ = {isa = PBXBuildFile; fileRef = AE760194202CB70400C5FAE2 /* bug.png */; };
-		AE760197202CB89000C5FAE2 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE760196202CB7EB00C5FAE2 /* misaki_gothic.ttf */; };
+		AEF3DFE52030995C00998131 /* FOTN.db in Resources */ = {isa = PBXBuildFile; fileRef = AEF3DFE4203098DC00998131 /* FOTN.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +32,16 @@
 		7539A4771CE7A57600505E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7539A47A1CE7A57600505E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7539A47C1CE7A57600505E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE385C892030133C00341E4A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE385C8B2030153E00341E4A /* SQLiteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		AE385C8C2030153E00341E4A /* SQLiteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		AE6674E9202FFCAF00E5DED4 /* misaki.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = misaki.json; sourceTree = "<group>"; };
+		AE6674EA202FFCAF00E5DED4 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
 		AE76018C202C3A1C00C5FAE2 /* SpeakToMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeakToMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE76018D202C3A1C00C5FAE2 /* BugConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugConnector.h; sourceTree = "<group>"; };
 		AE76018E202C3A1C00C5FAE2 /* BugConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugConnector.m; sourceTree = "<group>"; };
 		AE760194202CB70400C5FAE2 /* bug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bug.png; sourceTree = SOURCE_ROOT; };
-		AE760196202CB7EB00C5FAE2 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = SOURCE_ROOT; };
+		AEF3DFE4203098DC00998131 /* FOTN.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FOTN.db; sourceTree = "<group>"; };
 		B56B3B031CEB85E1001766E2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F94BC00DE1CBB28F60C07721 /* Pods_SpeakToMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeakToMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE385C8A2030133C00341E4A /* libsqlite3.0.tbd in Frameworks */,
 				A096F199327B517B6F88CFF8 /* Pods_SpeakToMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,17 +83,22 @@
 		7539A46F1CE7A57600505E8B /* SpeakToMe */ = {
 			isa = PBXGroup;
 			children = (
+				AEF3DFE4203098DC00998131 /* FOTN.db */,
+				AE385C9020301E0A00341E4A /* Resources */,
 				AE760194202CB70400C5FAE2 /* bug.png */,
 				7539A4701CE7A57600505E8B /* AppDelegate.swift */,
 				7539A4721CE7A57600505E8B /* ViewController.swift */,
 				7539A4741CE7A57600505E8B /* Main.storyboard */,
 				7539A4771CE7A57600505E8B /* Assets.xcassets */,
 				7539A4791CE7A57600505E8B /* LaunchScreen.storyboard */,
+				AE6674EA202FFCAF00E5DED4 /* misaki_gothic.ttf */,
+				AE6674E9202FFCAF00E5DED4 /* misaki.json */,
 				7539A47C1CE7A57600505E8B /* Info.plist */,
+				AE385C8B2030153E00341E4A /* SQLiteManager.h */,
+				AE385C8C2030153E00341E4A /* SQLiteManager.m */,
 				AE76018D202C3A1C00C5FAE2 /* BugConnector.h */,
 				AE76018E202C3A1C00C5FAE2 /* BugConnector.m */,
 				AE76018C202C3A1C00C5FAE2 /* SpeakToMe-Bridging-Header.h */,
-				AE760196202CB7EB00C5FAE2 /* misaki_gothic.ttf */,
 			);
 			path = SpeakToMe;
 			sourceTree = "<group>";
@@ -97,9 +112,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AE385C9020301E0A00341E4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B99B5166828130A2DA7AAA9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE385C892030133C00341E4A /* libsqlite3.0.tbd */,
 				F94BC00DE1CBB28F60C07721 /* Pods_SpeakToMe.framework */,
 			);
 			name = Frameworks;
@@ -169,10 +192,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF3DFE52030995C00998131 /* FOTN.db in Resources */,
+				AE6674EB202FFCAF00E5DED4 /* misaki.json in Resources */,
 				AE760195202CB70400C5FAE2 /* bug.png in Resources */,
-				AE760197202CB89000C5FAE2 /* misaki_gothic.ttf in Resources */,
 				7539A47B1CE7A57600505E8B /* LaunchScreen.storyboard in Resources */,
 				7539A4781CE7A57600505E8B /* Assets.xcassets in Resources */,
+				AE6674EC202FFCAF00E5DED4 /* misaki_gothic.ttf in Resources */,
 				7539A4761CE7A57600505E8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +260,7 @@
 				7539A4731CE7A57600505E8B /* ViewController.swift in Sources */,
 				AE76018F202C3A1C00C5FAE2 /* BugConnector.m in Sources */,
 				7539A4711CE7A57600505E8B /* AppDelegate.swift in Sources */,
+				AE385C8D2030153E00341E4A /* SQLiteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,4 +3,8 @@
 //
 
 
+
+#import <Realm/Realm.h>
+
 #import "BugConnector.h"
+

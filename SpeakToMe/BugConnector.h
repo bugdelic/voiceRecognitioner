@@ -11,7 +11,7 @@
 
 @interface BugConnector : NSObject
 
-- (void)setQue:(NSString *)argString;
+- (NSString*)setQue:(NSString *)argString;
 
 
 

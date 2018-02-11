@@ -77,7 +77,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     private func startRecording() throws {
-
+        
         // Cancel the previous task if it's running.
         if let recognitionTask = recognitionTask {
             recognitionTask.cancel()
@@ -109,18 +109,21 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             
             if error != nil || isFinal {
                 
-                
-                
+
                 var text = self.textView.text!
-                let message = OSCMessage(address, text)
+                
+                //var bugArray =  self.bug.setQue(text)
+                
+                var bugJson = self.bug.setQue(text)
+                let message = OSCMessage(address, bugJson)
                 client.send(message)
                 
-                //self.bug.setQue(result?.bestTranscription.formattedString)
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
                 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
+                
                 
                 self.recordButton.isEnabled = true
                 self.recordButton.setTitle("Start Recording", for: [])

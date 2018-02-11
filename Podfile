@@ -8,6 +8,10 @@ target 'SpeakToMe' do
   # Pods for SpeakToMe
   pod 'OSC'
   pod 'SwiftOSC', '~> 1.1'
-  
+  pod 'Realm'
+  pod 'FMDB'
+  pod 'MagicalRecord'
+
 
 end
+
