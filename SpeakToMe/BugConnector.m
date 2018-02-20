@@ -13,6 +13,72 @@
 @implementation BugConnector
 
 
+- (NSString*)checkText:(NSString *)argString;{
+    
+    int flag1=0;
+    int flag2=0;
+    NSRange range;
+    range = [argString rangeOfString:@"ネズミ"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag1=1;
+    }
+    range = [argString rangeOfString:@"牛"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag1=2;
+    }
+    range = [argString rangeOfString:@"トラ"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag1=3;
+    }
+    range = [argString rangeOfString:@"うさぎ"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag1=4;
+    }
+    
+    range = [argString rangeOfString:@"前"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag2=1;
+    }
+    range = [argString rangeOfString:@"後"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag2=2;
+    }
+    range = [argString rangeOfString:@"左"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag2=3;
+    }
+    range = [argString rangeOfString:@"右"];
+    if (range.location == NSNotFound) {
+    }else{
+        flag2=4;
+    }
+    
+        
+        NSMutableDictionary*bugReturner=[NSMutableDictionary dictionary];
+        
+        [bugReturner setObject:argString forKey:@"title"];
+        [bugReturner setObject:[NSNumber numberWithInteger:flag1] forKey:@"animal"];
+        [bugReturner setObject:[NSNumber numberWithInteger:flag2] forKey:@"direction"];
+        
+        NSError* error;
+        NSString*jsonBug;
+        if([NSJSONSerialization isValidJSONObject:bugReturner]){
+            NSData *json = [NSJSONSerialization dataWithJSONObject:bugReturner    options:NSJSONWritingPrettyPrinted error:&error];
+            NSLog(@"json %@", [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding] );
+            jsonBug=[[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+            
+        }
+        
+        return [NSString stringWithFormat:@"%d,%d",flag1,flag2 ];
+
+}
 - (NSString*)setQue:(NSString *)argString{
     
     NSLog(@"%@",argString);

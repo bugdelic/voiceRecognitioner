@@ -11,6 +11,8 @@ import Speech
 
 //import framework
 import SwiftOSC
+import CoreBluetooth
+import BlueCapKit
 
 let address = OSCAddressPattern("/test/")
 var port="8080"
@@ -18,6 +20,9 @@ var url="sonic.local"
 
 // Setup Client. Change address from localhost if needed.
 var client = OSCClient(address: url, port: Int(port)!)
+
+//let manager = BluetoothManager(queue: .main)
+
 
 public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     // MARK: Properties
@@ -114,7 +119,8 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 
                 //var bugArray =  self.bug.setQue(text)
                 
-                var bugJson = self.bug.setQue(text)
+                //var bugJson = self.bug.setQue(text)
+                var bugJson = self.bug.checkText(text)
                 let message = OSCMessage(address, bugJson)
                 client.send(message)
                 

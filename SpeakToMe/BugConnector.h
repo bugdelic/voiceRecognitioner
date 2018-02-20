@@ -13,6 +13,7 @@
 
 - (NSString*)setQue:(NSString *)argString;
 
+- (NSString*)checkText:(NSString *)argString;
 
 
 @end
