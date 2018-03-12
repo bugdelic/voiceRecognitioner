@@ -135,7 +135,8 @@ class FotnViewController: UIViewController, UITextFieldDelegate, SFSpeechRecogni
         // Setup Client. Change address from localhost if needed.
         
         let oscClient = OSCClient(address: url.text!, port: Int(port.text!)!)
-        
+        let oscClientBAN = OSCClient(address: url.text!, port: 1 + Int(port.text!)!)
+
         let address0 = OSCAddressPattern("/fotn/start")
         let address1  = OSCAddressPattern("/fotn/jis")
         let address2 = OSCAddressPattern("/fotn/utf")
@@ -155,6 +156,7 @@ class FotnViewController: UIViewController, UITextFieldDelegate, SFSpeechRecogni
             let message0 = OSCMessage(address0, text0)
             
             oscClient.send(message0)
+            oscClientBAN.send(message0);
             
             Thread.sleep(forTimeInterval:0.1)
             
@@ -181,7 +183,8 @@ class FotnViewController: UIViewController, UITextFieldDelegate, SFSpeechRecogni
                 
                 let bundle=OSCBundle(message1,message2,message3)
                 oscClient.send(bundle)
-                
+                oscClientBAN.send(bundle);
+
                 
                 Thread.sleep(forTimeInterval:0.1)
             }
@@ -190,7 +193,8 @@ class FotnViewController: UIViewController, UITextFieldDelegate, SFSpeechRecogni
             let message99 = OSCMessage(address99, text99)
             
             oscClient.send(message99)
-            
+            oscClientBAN.send(message99);
+
         } catch {
             print(error) // パースに失敗したときにエラーを表示
         }
